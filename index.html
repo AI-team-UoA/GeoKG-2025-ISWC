@@ -1,0 +1,270 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoKG-2025</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <div class="navbar-brand d-flex flex-column">
+            <span >GeoKG 2025</span>
+            <small class="text-muted" style="font-size: 0.8rem;">
+                A tutorial participating in the
+                <a href="https://iswc2025.semanticweb.org/" class="text-decoration-underline">24th International Semantic Web Conference</a>
+            </small>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero-section">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#capabilities-section">Capabilities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#architecture-section">Architecture</a></li>
+                <li class="nav-item"><a class="nav-link" href="#publications-section">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team-section">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#funding-section">Funding</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Capabilities Section -->
+<div id="capabilities-section" class="capabilities-section py-3 bg-light">    
+    <div class="container">
+        <div class="text-start mb">
+            <h2 class="fw-bold display-5">Tutorial Overview</h2>
+            <p class="text-muted">
+                In the last two decades, <strong>knowledge graphs</strong> (KGs) have seen increased interest thanks to their suitability for representing relations (edges) between entities (nodes), 
+                and their semi-structured nature, which eases the integration of diverse, heterogeneous data sources. This tutorial will introduce its participants to the latest advancements in the area of <strong>geospatial knowledge graphs</strong> (GeoKGs).
+            </p>
+            <p class="text-muted">
+                GeoKGs are knowledge graphs that contain <strong>geospatial knowledge</strong>. This knowledge is encoded using either <strong>longitude/latitude pairs</strong> or <strong>detailed geometries</strong> (e.g., lines, polygons, multipolygons etc.) which are more appropriate for modeling the geometries of features such as rivers, roads, countries etc.
+                GeoKGs are used in a variety of GIS appications like <a href="https://github.com/AI-team-UoA/GeoQA2">geospatial question-answering</a>, <a href="https://www.knowwheregraph.org/pilots/">disaster response</a>, <a href="https://terraq.di.uoa.gr/">earth observation</a>, <a href="https://doi.org/10.1017/dce.2024.11">flood assesment</a>, and <a href="https://pnyqa.di.uoa.gr/">electoral analysis</a> among others.
+            </p>
+            <div class="text-muted">
+                This tutorial aims to introduct its participants to the basic concepts of GeoKGs, their construction, and their applications. It will cover the following topics:
+                <ul>
+                    <li class="text-muted">Basic concepts of KGs and GeoKGs.</li>
+                    <li class="text-muted">Overview and comparison of existing GeoKGs.</li>
+                    <li class="text-muted">Techniques, data sources and tools for constructing GeoKGs.</li>
+                    <li class="text-muted">Question Answering over Geospatial Knowledge Graphs and the potential impact of LLMs in the area.</li>   
+                    <li class="text-muted">Applications and impact of GeoKGs.</li>             
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Architecture Section -->
+<div id="architecture-section" class="py-3 bg-light">
+    <div class="container">
+        <div class="text-start mb">
+            <h2 class="fw-bold display-5">Schedule</h2>
+            <p class="text-muted">GeoKG-2025 is a full-day tutorial, as seen in following schedule:</p>
+            <table class="table table-bordered table-hover table-striped align-middle">
+                <thead class="table-primary">
+                    <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Session</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>09:30 - 11:00</td>
+                    <td>
+                        <strong>Introduction to Knowledge Graphs</strong><br/>
+                        The basic concepts of KGs and GeoKGs.<br/>
+                        Sources of geospatial information.<br/>
+                        The knowledge graphs <a href="https://www.dbpedia.org/">DBpedia</a>, <a href="https://www.wikidata.org/">Wikidata</a>, 
+                        <a href="https://yago-knowledge.org/">YAGO2</a>, <a href="https://yago2geo.di.uoa.gr/">YAGO2geo</a>, 
+                        <a href="https://www.worldkg.org/">WorldKG</a>, <a href="https://knowwheregraph.org/">KnowWhereGraph</a>, 
+                        <a href="https://arxiv.org/abs/2405.15375">H3-GeoKG</a>, <a href="https://link.springer.com/chapter/10.1007/978-981-10-7359-5_17">CrowdGeoKG</a>, and <a href="https://www.mdpi.com/2220-9964/14/1/18">HGeoKG</a>.
+                    </td>
+                    </tr>
+                    <tr class="table-warning">
+                    <td>10:30 - 11:00</td>
+                    <td><strong>Coffee Break</strong></td>
+                    </tr>
+                    <tr>
+                    <td>11:00 - 12:30</td>
+                    <td>
+                        <strong>Methodologies for Geospatial Knowledge Graph Construction</strong><br/>
+                        Geospatial data integration and interlinking.<br>
+                        The tool <a href="https://github.com/AI-team-UoA/JedAI-spatial">JedAI-spatial</a>.
+                    </td>
+                    </tr>
+                    <tr class="table-warning">
+                    <td>12:30 - 14:00</td>
+                    <td><strong>Lunch Break</strong></td>
+                    </tr>
+                    <tr>
+                    <td>14:00 - 15:30</td>
+                    <td>
+                        <strong>Question Answering over Geospatial Knowledge Graphs</strong><br>
+                        The engines <a href="https://github.com/AI-team-UoA/GeoQA2">GeoQA2</a>, <a href="github.com/hamzeiehsan/Questions-To-GeoSPARQL">Questions-To-GeoSPARQL</a>, and <a href="https://terraq.di.uoa.gr/">TerraQ</a>.<br>
+                        The evaluation dataset <a href="https://github.com/AI-team-UoA/GeoQuestions1089/">GeoQuestions1089</a>.<br>
+                        How LLMs can advance the field of geospatial question-answering.
+                    </td>
+                    </tr>
+                    <tr class="table-warning">
+                    <td>15:30 - 16:00</td>
+                    <td><strong>Coffee Break</strong></td>
+                    </tr>
+                    <tr>
+                    <td>16:00 - 17:30</td>
+                    <td>
+                        <strong>Applications of Geospatial Knowledge Graphs</strong>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>17:30 - 18:00</td>
+                    <td>
+                        <strong>Discussion </strong>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Participants -->
+<div id="team-section" class="py-3 bg-light">
+    <div class="container">
+        <!-- Team Members Section -->
+        <div class="text-left">
+            <h2 class="fw-bold display-5">Organizers</h2>
+            <div class="container mb-4">
+                <!-- Team Member 1 -->
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-2 text-center">
+                        <img src="./static/images/skefalidis.jpeg" alt="Team Member 1" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-10">
+                        <h5 class="fw-bold">Sergios-Anestis Kefalidis</h5>
+                        <p class="small fst-italic">Sergios-Anestis Kefalidis is a Ph.D. student and Research Assistant in the AI Team of National and
+                        Kapodistrian University of Athens. He holds a B.Sc. and a MSc. in Computer Science from the Na-
+                        tional and Kapodistrian University of Athens. He has actively participated in multiple European research
+                        projects (DA4DTE, GeoQA, STELAR). His research focuses on universal question-answering over knowl-
+                        edge graphs and applications for geospatial question-answering systems. His Ph.D. research is supported
+                        by the “NIK. D. XRYSOVERGI” scholarship of the Greek State Scholarship Foundation. Before his involvement with the AI Team, 
+                        during his undergraduate studies, he participated in Google Summer of
+                        Code 2020, 2021 and 2022. During this time he was an active contributor of open-source software and
+                        has even served as a core developer and maintainer for the widely used Xfce desktop-environment for
+                        UNIX-like systems.</p>
+                        <!-- Links -->
+                        <div class="mt-2">
+                            <a href="http://users.uoa.gr/~skefalidis/" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-globe me-1"></i>Website
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=ApgfDoYAAAAJ&hl" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-graduation-cap me-1"></i>Google Scholar
+                            </a>
+                            <a href="https://github.com/skefalidis" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-github me-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-2 text-center">
+                        <img src="./static/images/kplas.jpeg" alt="Team Member 2" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-10">
+                        <h5 class="fw-bold">Kostas Plas</h5>
+                        <p class="small fst-italic">Kostas Plas is a Ph.D. student and Research Assistant in the AI Team of the National and Kapodistrian
+                        University of Athens. He holds a BSc. and a MSc. in Computer Science from the National and Kapodistrian
+                        University of Athens. His research focuses on optimizing graph databases and geospatial triple stores as
+                        well as spatial reasoning in LLMs. His Ph.D. is supported by the scholarship with code “GD.402. ARCHI-
+                        YPPhD-0824” from the Arhimedes Research Unit. He has gathered experience in geospatial knowledge
+                        graph and knowledge graph augmentation and manipulation through the usage of LLMs in his participa-
+                        tion on the European projects DA4DTE and STELAR.</p>
+                        <!-- Links -->
+                        <div class="mt-2">
+                            <a href="https://www.linkedin.com/in/kostas-plas-a0229120b/" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-globe me-1"></i>Website
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=5-ZgRNIAAAAJ&hl" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-graduation-cap me-1"></i>Google Scholar
+                            </a>
+                            <a href="https://github.com/KwtsPls" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-github me-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-2 text-center">
+                        <img src="./static/images/mkoubarakis.jpg" alt="Team Member 3" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-10">
+                        <h5 class="fw-bold">Manolis Koubarakis</h5>
+                        <p class="small fst-italic">Manolis Koubarakis is a Professor and Director of Graduate Studies in the Dept. of Informatics and
+                        Telecommunications, National and Kapodistrian University of Athens. He is a Fellow of EurAI (European Association for Artificial Intelligence) since
+                        2015 and Member of the EurAI Board since 2022. He has published more than 250 papers that have
+                        been widely cited (8973 citations and h-index 52 in Google Scholar) in the areas of Artificial Intelligence
+                        (especially Knowledge Representation and Constraint Programming), Databases (especially temporal and
+                        spatial databases), Semantic Web, Knowledge Graphs and Linked Data (especially geospatial and Earth
+                        observation data), and Deep Learning for Natural Language Processing. Manolis has taught at university
+                        level since 1995 and is a recognized AI researcher in spatial reasoning, geospatial databases, and knowledge
+                        graphs. He has given many tutorials and has led many laboratories for undegraduate and graduate courses.</p>
+                        <!-- Links -->
+                        <div class="mt-2">
+                            <a href="https://cgi.di.uoa.gr/~koubarak/" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-globe me-1"></i>Website
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=FKy2868AAAAJ&hl" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-graduation-cap me-1"></i>Google Scholar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-2 text-center">
+                        <img src="./static/images/cogan.jpg" alt="Team Member 4" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-10">
+                        <h5 class="fw-bold">Cogan Shimizu</h5>
+                        <p class="small fst-italic">Cogan Shimizu is an Assistant Professor at Wright State University, USA, in the Department of Com-
+                        puter Science and Engineering, where he directs the Knowledge and Semantic Technologies (KASTLE)
+                        Lab. His work broadly spans the field of knowledge engineering, but it is rooted in pattern-based design
+                        and implementation of modular ontology. These techniques have been applied across many domains, in-
+                        cluding digital history, geospatial knowledge graphs, logistics, and education. By now, he has also pivoted
+                        into foundational research for neurosymbolic artificial intelligence across these domains. Cogan has au-
+                        thored over 100 peer reviewed articles in highly regarded venues. Cogan has been teaching undergraduate
+                        and graduate courses since 2015, and has helped deliver many tutorials at ISWC, ESWC, and WWW.</p>
+                        <!-- Links -->
+                        <div class="mt-2">
+                            <a href="https://cogan-shimizu.github.io/" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-globe me-1"></i>Website
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=PlBF5eQAAAAJ&hl" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fas fa-graduation-cap me-1"></i>Google Scholar
+                            </a>
+                            <a href="https://github.com/cogan-shimizu" target="_blank" class="me-3 text-decoration-none">
+                                <i class="fab fa-github me-1"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
